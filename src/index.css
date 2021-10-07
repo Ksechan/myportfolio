@@ -171,19 +171,44 @@ body {
 .landing-page-container {
   position: fixed;
   top: 20%;
-  left: 18%;
-  width: auto;
-  display: inline;
-  font-size: 130px;
+  left: 10%;
   text-align: left;
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: 3px;
 }
 
-.text-animate {
-  transform: translateX(0);
-  transition-duration: 0.3s;
+.first-grow-container,
+.second-grow-container,
+.third-grow-container {
+  display: block;
+  height: 9em;
+  overflow-y: hidden;
+}
+
+.first-grow {
+  font-size: 9em;
+  animation: grow 0.7s backwards;
+}
+
+.second-grow {
+  font-size: 9em;
+  animation: grow 0.7s 0.5s backwards;
+}
+
+.third-grow {
+  font-size: 9em;
+  animation: grow 0.7s 1.0s backwards;
+}
+
+@keyframes grow {
+  to {
+    transform: translateY(0);
+  }
+
+  from {
+    transform: translateY(9em);
+  }
 }
 
 .text-animate:hover {
@@ -204,7 +229,20 @@ body {
   background-image: url('./img/sechan.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.35;
+  animation: sechan-img-animate 1.7s backwards;
+}
+
+@keyframes sechan-img-animate {
+  to {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
 }
 
 
