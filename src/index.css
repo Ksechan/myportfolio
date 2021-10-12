@@ -127,10 +127,10 @@ table {
 html {
   box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+
+button {
+  border: 0;
+  background-color: transparent;
 }
 
 button:focus {
@@ -142,11 +142,6 @@ a {
   text-decoration: none; 
   outline: none
 }
-
- a:hover, a:active {
-   text-decoration: none; 
-   color:#fff; 
-   background-color:#f59000;}
 
 
 /* Portfolio */
@@ -161,7 +156,7 @@ body {
 }
 
 .hide { 
-  display: none;
+  display: none !important;
 }
 
 .text-color-red {
@@ -178,10 +173,7 @@ body {
   letter-spacing: 3px;
 }
 
-.first-grow-container,
-.second-grow-container,
-.third-grow-container {
-  display: block;
+.grow-container {
   height: 9em;
   overflow-y: hidden;
 }
@@ -211,22 +203,17 @@ body {
   }
 }
 
-.text-animate:hover {
-  transform: translateX(40px);
-}
-
 
 .hello {
   color: #fff;
-  font-size: 140px;
 }
 
 .sechan-img {
-  position: fixed;
+  position: absolute;
   left: 40%;
   width: 60%;
   height: 100vh;
-  background-image: url('./img/sechan.jpeg');
+  background-image: url('./_img/sechan.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.35;
@@ -245,5 +232,35 @@ body {
   }
 }
 
+.on-hover40 {
+  display: inline-block;
+  margin-left: 0;
+  transition: all 0.35s ease-out;
+}
+
+.on-hover40:hover {
+  margin-left: 40px;
+}
 
 
+/* HomeBadge */
+
+.homebadge-container {
+  position: fixed;
+  top: 100px;
+  right: 10%;
+  transition: all 0.35s ease-out;
+}
+
+.homebadge-container:hover {
+  margin-right: 30px;
+}
+
+.homebadge-btn {
+  display: inline;
+  color: #fff;
+  font-size: 20px;
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+}

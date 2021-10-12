@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
-  BrowserRouter,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
@@ -12,7 +9,6 @@ function LandingPage() {
   const [contactMouseOver, setContactMouseOver] = useState(false);
 
   return (
-    <BrowserRouter>
       
       <header >
         
@@ -22,62 +18,59 @@ function LandingPage() {
 
         <div className="landing-page-container">
 
-            <div className="first-grow-container">
-              <div className="first-grow"
+          <div className="grow-container">
+            <div className="first-grow"
               onMouseEnter={() => { setAboutMouseOver(true) }}
               onMouseLeave={() => { setAboutMouseOver(false) }}>
-                <Link to="/About" className={`hello ${aboutMouseOver ? '' : 'hide'}`}>
-                  <div>
-                  About
+                <Link to="/About" className="on-hover40">
+                  <div className={`hello ${aboutMouseOver ? '' : 'hide'}`}>
+                About
                   </div>
-                </Link>
-                <div className={`hello ${aboutMouseOver ? 'hide' : ''}`}>
+                  <div className={`hello ${aboutMouseOver ? 'hide' : ''}`}>
                 Hello.
                 </div>
+                </Link>
             </div>
           </div>
 
 
         
-            <div className="second-grow-container">
+            <div className="grow-container">
               <div className="second-grow"
                 onMouseEnter={() => { setWorkMouseOver(true) }}
                   onMouseLeave={() => { setWorkMouseOver(false) }}>
-                <Link to="/Work" className={`${workMouseOver ? '' : 'hide'}`}>
-                  <div className="text-color-red ">
-                    Work
+                <Link to="/Work" className="on-hover40">
+                  <div className={`text-color-red ${workMouseOver ? '' : 'hide'}`}>
+                 Work
                   </div>
-                </Link>
                 <div className={`text-color-red ${workMouseOver ? 'hide' : ''}`}>
                   I am
                 </div>
+                </Link>
+
               </div>
             </div>
 
 
-          <div className="third-grow-container">
+          <div className="grow-container">
             <div className="third-grow"
                 onMouseEnter={() => { setContactMouseOver(true) }}
                   onMouseLeave={() => { setContactMouseOver(false) }}>
-                <Link to="/Contact" className={`${contactMouseOver ? '' : 'hide'}`}>
-                  <div className="text-color-red ">
-                    Contact
+                <Link to="/Contact" className="on-hover40">
+                  <div className={`text-color-red ${contactMouseOver ? '' : 'hide'}`}>
+                Contact
                   </div>
-                </Link>
-                <div className={`text-color-red ${contactMouseOver ? 'hide' : ''}`}>
+                  <div className={`text-color-red ${contactMouseOver ? 'hide' : ''}`}>
                   Sechan
                 </div>
+                </Link>
             </div>
           </div>
           
-
-          
         </div>
-        
 
         </header>
 
-    </BrowserRouter>
   );
 }
 
