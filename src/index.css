@@ -180,31 +180,32 @@ body {
 
 .landing-page-container {
   position: fixed;
-  top: 20%;
+  top: 50%;
   left: 10%;
   text-align: left;
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: 2px;
+  transform: translateY(-50%);
 }
 
 .grow-container {
-  height: 6em;
+  height: 18vmin;
   overflow-y: hidden;
 }
 
 .first-grow {
-  font-size: 6em;
+  font-size: 18vmin;
   animation: grow 0.7s backwards;
 }
 
 .second-grow {
-  font-size: 6em;
+  font-size: 18vmin;
   animation: grow 0.7s 0.5s backwards;
 }
 
 .third-grow {
-  font-size: 6em;
+  font-size: 18vmin;
   animation: grow 0.7s 1s backwards;
 }
 
@@ -292,6 +293,7 @@ body {
 }
 
 .contact-title {
+  display: block;
   font-size: 5em;
   font-weight: bold;
   margin-bottom: 60px;
@@ -299,9 +301,7 @@ body {
 }
 
 .contact-desc {
-  font-size: 1.7em;
-  vertical-align: middle;
-  margin-bottom: 50px;
+  font-size: 1.6em;
 }
 
 .contact-list {
@@ -314,7 +314,7 @@ body {
 }
 
 .contact-list li:hover {
-  transform: scale(1.1);
+  margin-left: 30px;
   color: #ea0f1e;
 }
 
@@ -324,6 +324,43 @@ body {
   margin-bottom: 10px;
 }
 
-.contact-info {
-  font-size: 1.1em;
+.contact-grow-container1 {
+  overflow-y: hidden;
+  height: 13em;
+}
+
+.contact-grow1 {
+  animation: contact-grow1 0.5s;
+}
+
+.contact-grow-container2 {
+  overflow-y: hidden;
+  height: 3em;
+  margin-bottom: 20px;
+}
+
+.contact-grow2 {
+  height: 3em;
+  display: block;
+  animation: contact-grow2 0.8s;
+}
+
+@keyframes contact-grow1 {
+  to {
+    transform: translateY(0);
+  }
+
+  from {
+    transform: translateY(13em);
+  }
+}
+
+@keyframes contact-grow2 {
+  to {
+    transform: translateY(0);
+  }
+
+  from {
+    transform: translateY(3em);
+  }
 }
