@@ -7,8 +7,8 @@ function LandingPage() {
   const [contactMouseOver, setContactMouseOver] = useState(false);
 
   return (
-    <div className="height-container">
-      <div className="sechan-img"></div>
+    <div>
+      <div className="bg-img"></div>
 
       <div className="landing-page-container">
         <div className="grow-container">
