@@ -161,8 +161,7 @@ a {
 html,
 body {
   width: 100%;
-  height: 100%;
-  height: -webkit-fill-available; /* Chrome */
+
   margin: 0;
   overflow-x: hidden;
 }
@@ -262,6 +261,17 @@ body {
   top: 10%;
   right: 10%;
   transition: all 0.35s ease-out;
+  animation: opacity 0.8s ease-out;
+}
+
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+  }
 }
 
 .homebadge-container:hover {
@@ -277,31 +287,31 @@ body {
   cursor: pointer;
 }
 
-/* Work */
+/* About */
 
-.work-margin {
+.about-margin {
   margin: 35vh 0 30vh 10vw;
 }
 
-.work-title {
+.about-title {
   display: inline-block;
   font-size: 4.5em;
   line-height: 1.3;
   letter-spacing: 0.1em;
   font-weight: bold;
-  animation: work-grow-title 0.6s ease;
+  animation: about-grow-title 0.6s ease;
   padding-left: 5vw;
   border-left: solid #888 3px;
 }
 
-.work-grow-title {
+.about-grow-title {
   position: relative;
   width: auto;
   height: 17em;
   overflow-y: hidden;
 }
 
-.work-bg-img {
+.about-bg-img {
   background-image: url('./_assets/Rapunzel.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -312,7 +322,72 @@ body {
   overflow: hidden;
 }
 
-@keyframes work-grow-title {
+.about-container {
+  height: auto;
+}
+
+.about-container h2 {
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.about-develop {
+  display: inline-block;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  margin: 50px 0 40px;
+}
+
+.about-desc {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin: 0 20vh 30vh 0;
+}
+
+.skill-img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-img-container li {
+  position: relative;
+  display: inline-block;
+  width: 10vh;
+  height: 10vh;
+  margin-bottom: 4vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.skill-img-container li:first-child {
+  margin-top: 4vh;
+}
+
+.skill-img-container li div {
+  position: absolute;
+  left: 13vh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.html-img {
+  background-image: url('../src/_assets/html.png');
+}
+
+.css-img {
+  background-image: url('../src/_assets/css.png');
+}
+
+.javascript-img {
+  background-image: url('../src/_assets/javascript.png');
+}
+
+.react-img {
+  background-image: url('../src/_assets/react.png');
+}
+
+@keyframes about-grow-title {
   to {
     transform: translateY(0);
   }

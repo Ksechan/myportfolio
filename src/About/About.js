@@ -1,34 +1,77 @@
-import react from 'react';
+import { useEffect, useState } from 'react';
 import HomeBadge from '../homeBadge/homeBadge';
+import useScroll from '../scrollHandler/scrollY';
 
-function About() {
+const About = () => {
+  const { scrollY } = useScroll();
+  console.log({ scrollY });
+
   return (
-    <div className="text-color-white work-container">
+    <div className="text-color-white about-container">
       <HomeBadge />
-      <div className="work-margin">
+
+      <div className="about-margin">
         <p>
-          <div className="work-grow-title">
-            <p className="work-title">
+          <div className="about-grow-title">
+            <h1 className="about-title">
               안녕하세요. <br />
               개발하며 개발되는 개발자 <br />
               김세찬입니다.
-            </p>
+            </h1>
           </div>
         </p>
-        <div className="work-bg-img"></div>
+        <div className="about-bg-img"></div>
         {/* 스크롤에 맞춰서 효과를 넣을 예정 */}
-        <span className="text-color-red">Develop [ dɪˈveləp ]</span>
-        <p>
-          1. (소프트웨어 등) 개발하다. <br />
-          2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
+        <h2>About</h2>
+        <button
+          className={scrollY > 10 ? 'text-color-white' : 'text-color-red'}
+        >
+          asdf
+        </button>
+        <span className="text-color-red about-develop">
+          Develop [ dɪˈveləp ]
+        </span>
+        <p className="about-desc">
+          <p>
+            1. (소프트웨어 등) 개발하다. <br />
+            2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
+          </p>
+          <br />
+          <p>
+            위의 뜻을 제외하고도 Develop이라는 단어가 내포하고 있는 의미는
+            굉장히 많습니다.
+            <br />
+            단순한 뜻의 개발이 아닌 Develop의 수많은 의미를 흡수하는 Developer가
+            되도록 노력하겠습니다.
+            <br /> <br />
+            "선한 영향력을 최대한 많이 끼치자" <br />
+            저의 삶의 목표입니다. 저로 인해서 많은 사람들의 삶의 질이 향상
+            되었으면 하는 소망이 있습니다. <br />
+            제가 만든 서비스로 다양한 연령층과 몸이 불편하신 분들도 어려움 없이
+            편리하게 이용할 수 있게 선한 영향력을 펼쳐보고 싶습니다. <br />{' '}
+            <br />
+            현재 저는 독학으로 프론트엔드 개발자가 되기위하여 HTML, CSS,
+            Javascript, React를 위주로 공부 하였고,
+            <br />더 나아가 SASS/SCSS, Typescript, nodeJS 등 프론트엔드의 역량을
+            끌어올린 뒤 백엔드 부분도 접점을 만들어 풀스택 개발자로 진화하기
+            위해 더욱 노력할 것입니다.
+          </p>
         </p>
-        위와 별개로 Develop이라는 단어가 내포하고 있는 의미는 굉장히 많습니다.
-        <br />
-        단순한 뜻의 개발이 아닌 Develop의 수많은 의미를 흡수하는 Developer가
-        되도록 노력하겠습니다.
+
+        <div className="about-skill">
+          <h2>Skills</h2>
+          <ul className="skill-img-container">
+            <li className="html-img">
+              <div className="graph"></div>
+            </li>
+            <li className="css-img"></li>
+            <li className="javascript-img"></li>
+            <li className="react-img"></li>
+          </ul>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;
