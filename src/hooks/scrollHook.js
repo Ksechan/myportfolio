@@ -4,7 +4,16 @@ function useScroll() {
   const [scrollY, setScrollY] = useState(0);
 
   const scrollListener = () => {
-    setScrollY(window.pageYOffset);
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop === 0) {
+      setScrollY(0);
+      return;
+    }
+
+    const windowHeight = scrollHeight - clientHeight;
+    const currentPercent = (scrollTop / windowHeight) * 100;
+
+    setScrollY(currentPercent.toFixed(0));
   };
 
   useEffect(() => {

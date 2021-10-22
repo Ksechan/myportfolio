@@ -1,10 +1,14 @@
-import { useEffect, useState } from 'react';
 import HomeBadge from '../homeBadge/homeBadge';
-import useScroll from '../scrollHandler/scrollY';
+import useScroll from '../hooks/scrollHook';
+import useHover from '../hooks/hoverHook';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const { scrollY } = useScroll();
-  console.log({ scrollY });
+  // console.log({ scrollY });
+
+  const [hoverRef, isHovered] = useHover();
+  const [hoverRef2, isHovered2] = useHover();
 
   return (
     <div className="text-color-white about-container">
@@ -22,12 +26,9 @@ const About = () => {
         </p>
         <div className="about-bg-img"></div>
         {/* 스크롤에 맞춰서 효과를 넣을 예정 */}
-        <h2>About</h2>
-        <button
-          className={scrollY > 10 ? 'text-color-white' : 'text-color-red'}
-        >
-          asdf
-        </button>
+        <h2 className={scrollY > 10 ? 'text-color-white' : 'text-color-red'}>
+          About
+        </h2>
         <span className="text-color-red about-develop">
           Develop [ dɪˈveləp ]
         </span>
@@ -36,7 +37,7 @@ const About = () => {
             1. (소프트웨어 등) 개발하다. <br />
             2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
           </p>
-          <br />
+          <br /> <br />
           <p>
             위의 뜻을 제외하고도 Develop이라는 단어가 내포하고 있는 의미는
             굉장히 많습니다.
@@ -62,12 +63,43 @@ const About = () => {
           <h2>Skills</h2>
           <ul className="skill-img-container">
             <li className="html-img">
-              <div className="graph"></div>
+              <div className="graph-80"></div>
+              <div></div>
             </li>
-            <li className="css-img"></li>
-            <li className="javascript-img"></li>
-            <li className="react-img"></li>
+            <li className="css-img">
+              <div className="graph-70"></div>
+              <div></div>
+            </li>
+            <li className="javascript-img">
+              <div className="graph-60"></div>
+              <div></div>
+            </li>
+            <li className="react-img">
+              <div className="graph-60"></div>
+              <div></div>
+            </li>
           </ul>
+        </div>
+        <div className="about-link-container text-color-white">
+          <Link
+            to="/Work"
+            ref={hoverRef}
+            className={`about-link-to-work ${
+              isHovered ? 'text-color-red' : ''
+            }`}
+          >
+            <span>GO Work</span>
+          </Link>
+          <br />
+          <Link
+            to="/Contact"
+            ref={hoverRef2}
+            className={`about-link-to-contact ${
+              isHovered2 ? 'text-color-red' : ''
+            }`}
+          >
+            <span>GO Contact</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -143,6 +143,9 @@ a {
   outline: none;
 }
 
+p {
+  display: inline-block;
+}
 /* Text-color */
 
 .text-color-red {
@@ -341,8 +344,20 @@ body {
 .about-desc {
   font-size: 1.3em;
   line-height: 1.5;
-  margin: 0 20vh 30vh 0;
+  margin: 0 50vh 30vh 0;
 }
+
+@keyframes about-grow-title {
+  to {
+    transform: translateY(0);
+  }
+
+  from {
+    transform: translateY(4.5em);
+  }
+}
+
+/* About > Skill */
 
 .skill-img-container {
   display: flex;
@@ -364,11 +379,53 @@ body {
   margin-top: 4vh;
 }
 
-.skill-img-container li div {
+.skill-img-container li div:first-child {
   position: absolute;
-  left: 13vh;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  left: 15vh;
+  height: 0.8vh;
+  background-color: #ea0f1e;
+}
+
+.skill-img-container li div:first-child::after {
+  position: absolute;
+  right: -6vh;
+  bottom: 0.1px;
+  color: #ea0f1e;
+  font-size: 0.8em;
+}
+
+.skill-img-container li div:last-child {
+  position: absolute;
+  left: 15vh;
+  top: 57%;
+  height: 0.3vh;
+  width: 80vh;
+  background-color: #fff;
+}
+
+.graph-80 {
+  width: 64vh;
+}
+
+.graph-80::after {
+  content: '80%';
+}
+
+.graph-70 {
+  width: 56vh;
+}
+
+.graph-70::after {
+  content: '70%';
+}
+
+.graph-60 {
+  width: 48vh;
+}
+
+.graph-60::after {
+  content: '60%';
 }
 
 .html-img {
@@ -387,14 +444,29 @@ body {
   background-image: url('../src/_assets/react.png');
 }
 
-@keyframes about-grow-title {
-  to {
-    transform: translateY(0);
-  }
+.about-link-container {
+  position: relative;
+  display: flex;
+  margin-top: 15vh;
+  font-size: 1.2em;
+}
 
-  from {
-    transform: translateY(4.5em);
-  }
+.about-link-container a {
+  position: absolute;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.about-link-container a:last-child {
+  left: 50vh;
+}
+
+.about-link-container a:hover {
+  transform: translateX(3vh);
+}
+
+.about-link-container a:hover::before {
+  content: '→   ';
 }
 
 /* Contact */
