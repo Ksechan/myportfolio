@@ -1,27 +1,28 @@
-import react, { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
-function useScroll() {
-  const [scrollY, setScrollY] = useState(0);
+// function useScroll() {
+//   const [scrollY, setScrollY] = useState(0);
 
-  const scrollListener = () => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop === 0) {
-      setScrollY(0);
-      return;
-    }
+//   const scrollListener = () => {
+//     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+//     if (scrollTop === 0) {
+//       setScrollY(0);
 
-    const windowHeight = scrollHeight - clientHeight;
-    const currentPercent = (scrollTop / windowHeight) * 100;
+//       return;
+//     }
 
-    setScrollY(currentPercent.toFixed(0));
-  };
+//     const windowHeight = scrollHeight - clientHeight;
+//     const currentPercent = (scrollTop / windowHeight) * 100;
 
-  useEffect(() => {
-    window.addEventListener('scroll', scrollListener);
-    return () => window.removeEventListener('scroll', scrollListener);
-  }, []);
+//     setScrollY(currentPercent.toFixed(0));
+//   };
 
-  return { scrollY };
-}
+//   useEffect(() => {
+//     window.addEventListener('scroll', scrollListener);
+//     return () => window.removeEventListener('scroll', scrollListener);
+//   }, []);
 
-export default useScroll;
+//   return { scrollY };
+// }
+
+// export default useScroll;

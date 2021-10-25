@@ -1,4 +1,3 @@
-import react from 'react';
 import HomeBadge from '../homeBadge/homeBadge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -33,6 +32,7 @@ function Contact() {
             <a
               href="mailto:rlatpcks77@gmail.com"
               target="_blank"
+              rel="noopener noreferrer"
               className="contact-grow2"
             >
               <li>
@@ -47,6 +47,7 @@ function Contact() {
             <a
               href="https://github.com/rlatpks77"
               target="_blank"
+              rel="noopener noreferrer"
               className="contact-grow2"
             >
               <li>

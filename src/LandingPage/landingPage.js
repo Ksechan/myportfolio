@@ -11,7 +11,7 @@ function LandingPage() {
       <div className="bg-img"></div>
 
       <div className="landing-page-container">
-        <div className="grow-container">
+        <div className="grow-container on-hover40">
           <div
             className="first-grow"
             onMouseEnter={() => {
@@ -21,22 +21,22 @@ function LandingPage() {
               setAboutMouseOver(false);
             }}
           >
-            <Link to="/About" className="on-hover40">
-              <div
+            <Link to="/About">
+              <span
                 className={`text-color-white ${aboutMouseOver ? '' : 'hide'}`}
               >
                 About
-              </div>
-              <div
+              </span>
+              <span
                 className={`text-color-white ${aboutMouseOver ? 'hide' : ''}`}
               >
                 Hello.
-              </div>
+              </span>
             </Link>
           </div>
         </div>
 
-        <div className="grow-container">
+        <div className="grow-container on-hover40">
           <div
             className="second-grow"
             onMouseEnter={() => {
@@ -46,7 +46,7 @@ function LandingPage() {
               setWorkMouseOver(false);
             }}
           >
-            <Link to="/Work" className="on-hover40">
+            <Link to="/Work">
               <div className={`text-color-red ${workMouseOver ? '' : 'hide'}`}>
                 Work
               </div>
@@ -57,7 +57,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="grow-container">
+        <div className="grow-container on-hover40">
           <div
             className="third-grow"
             onMouseEnter={() => {
@@ -67,7 +67,7 @@ function LandingPage() {
               setContactMouseOver(false);
             }}
           >
-            <Link to="/Contact" className="on-hover40">
+            <Link to="/Contact">
               <div
                 className={`text-color-red ${contactMouseOver ? '' : 'hide'}`}
               >

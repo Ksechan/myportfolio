@@ -1,14 +1,20 @@
 import HomeBadge from '../homeBadge/homeBadge';
-import useScroll from '../hooks/scrollHook';
+// import useScroll from '../hooks/scrollHook';
 import useHover from '../hooks/hoverHook';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import '../aos-master/dist/aos.css';
+import { useEffect } from 'react/cjs/react.development';
 
 const About = () => {
-  const { scrollY } = useScroll();
-  // console.log({ scrollY });
-
   const [hoverRef, isHovered] = useHover();
   const [hoverRef2, isHovered2] = useHover();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+    });
+  });
 
   return (
     <div className="text-color-white about-container">
@@ -16,7 +22,7 @@ const About = () => {
 
       <div className="about-margin">
         <p>
-          <div className="about-grow-title">
+          <div data-aos="fade-up">
             <h1 className="about-title">
               안녕하세요. <br />
               개발하며 개발되는 개발자 <br />
@@ -25,20 +31,20 @@ const About = () => {
           </div>
         </p>
         <div className="about-bg-img"></div>
+
         {/* 스크롤에 맞춰서 효과를 넣을 예정 */}
-        <h2 className={scrollY > 10 ? 'text-color-white' : 'text-color-red'}>
-          About
-        </h2>
-        <span className="text-color-red about-develop">
+
+        <h2 data-aos="fade-up">About</h2>
+        <span className="text-color-red about-develop" data-aos="fade-up">
           Develop [ dɪˈveləp ]
         </span>
         <p className="about-desc">
-          <p>
+          <p data-aos="fade-up">
             1. (소프트웨어 등) 개발하다. <br />
             2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
           </p>
           <br /> <br />
-          <p>
+          <p data-aos="fade-left">
             위의 뜻을 제외하고도 Develop이라는 단어가 내포하고 있는 의미는
             굉장히 많습니다.
             <br />
@@ -59,28 +65,32 @@ const About = () => {
           </p>
         </p>
 
-        <div className="about-skill">
+        <div className="about-skill" data-aos="fade-right">
           <h2>Skills</h2>
           <ul className="skill-img-container">
             <li className="html-img">
-              <div className="graph-80"></div>
+              <div className="graph-80" data-aos="skill-graph-80"></div>
               <div></div>
             </li>
             <li className="css-img">
-              <div className="graph-70"></div>
+              <div className="graph-70" data-aos="skill-graph-70"></div>
               <div></div>
             </li>
             <li className="javascript-img">
-              <div className="graph-60"></div>
+              <div className="graph-60" data-aos="skill-graph-60"></div>
               <div></div>
             </li>
             <li className="react-img">
-              <div className="graph-60"></div>
+              <div className="graph-60" data-aos="skill-graph-60"></div>
               <div></div>
             </li>
           </ul>
         </div>
-        <div className="about-link-container text-color-white">
+
+        <div
+          className="about-link-container text-color-white"
+          data-aos="fade-down"
+        >
           <Link
             to="/Work"
             ref={hoverRef}

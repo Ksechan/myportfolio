@@ -1,13 +1,12 @@
-import react from 'react'
-import HomeBadge from '../homeBadge/homeBadge'
+import HomeBadge from '../homeBadge/homeBadge';
 
 function Work() {
   return (
     <div>
-      <HomeBadge/>
+      <HomeBadge />
       gkdl
     </div>
-  )
+  );
 }
 
 export default Work;
