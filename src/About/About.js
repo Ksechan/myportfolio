@@ -1,6 +1,6 @@
 import HomeBadge from '../homeBadge/homeBadge';
 // import useScroll from '../hooks/scrollHook';
-import useHover from '../hooks/hoverHook';
+import useHover from '../hooks/useHook';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import '../aos-master/dist/aos.css';

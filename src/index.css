@@ -229,7 +229,7 @@ body {
   left: 40%;
   width: 100vh;
   height: 100vh;
-  background-image: url('./_assets/sechan.jpeg');
+  background-image: url('./assets/sechan.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.35;
@@ -317,7 +317,7 @@ body {
 }
 
 .about-bg-img {
-  background-image: url('./_assets/Rapunzel.jpg');
+  background-image: url('./assets/Rapunzel.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -445,19 +445,19 @@ body {
 }
 
 .html-img {
-  background-image: url('../src/_assets/html.png');
+  background-image: url('../src/assets/html.png');
 }
 
 .css-img {
-  background-image: url('../src/_assets/css.png');
+  background-image: url('../src/assets/css.png');
 }
 
 .javascript-img {
-  background-image: url('../src/_assets/javascript.png');
+  background-image: url('../src/assets/javascript.png');
 }
 
 .react-img {
-  background-image: url('../src/_assets/react.png');
+  background-image: url('../src/assets/react.png');
 }
 
 .about-link-container {
@@ -483,6 +483,37 @@ body {
 
 .about-link-container a:hover::before {
   content: '→   ';
+}
+
+/* Work */
+
+.work-margin {
+  margin: 25vh 16vw 30vh 10vw;
+}
+
+.work-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, minmax(10vh, auto));
+  grid-template-rows: repeat(2, minmax(60vh, auto));
+  gap: 3vh 5vh;
+  padding: 2vh;
+  border: 1px solid blue;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .item:nth-child(1) {
+  grid-column: 1 / 3;
 }
 
 /* Contact */
