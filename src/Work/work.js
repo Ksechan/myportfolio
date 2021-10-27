@@ -19,6 +19,23 @@ function Work() {
   return (
     <div className="text-color-white work-margin">
       <HomeBadge />
+      {/* div 태그가 필요없어지면 지워라 */}
+      <div>
+        <ul className="work-list">
+          <li>
+            <h4 className="work-list-title">ToDoList</h4>
+            <span className="work-list-subtitle text-color-red">
+              todo check app
+            </span>
+          </li>
+          <li>
+            <h4 className="work-list-title">Prototype Shop</h4>
+            <span className="work-list-subtitle text-color-red">
+              prototype design shop
+            </span>
+          </li>
+        </ul>
+      </div>
       <div className="work-container text-color-white">
         {workArray.map((work) => {
           const { id, title, desc, thumbnail } = work;
