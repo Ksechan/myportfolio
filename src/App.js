@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import about from './about/about';
 import Work from './work/work';
 import Contact from './contact/contact';
+import ScrollToTop from './hooks/useScrollToTop';
 
 function App() {
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <Route path="/" exact={true} component={LandingPage} />
         <Route path="/About" component={about} />
         <Route path="/Work" component={Work} />
