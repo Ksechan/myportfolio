@@ -13,7 +13,7 @@ function Work() {
       id: '1',
       title: 'To Do List',
       subtitle: 'todo check app',
-      desc: 'This prototype was made with ProtoPie, the interactive prototyping tool for all digital products.',
+      desc: '할일을 입력, 수정, 삭제할 수 있는 to-do-list',
       thumbnail: '/thumbnail-images/todolist-thumbnail.gif',
       gitHub: 'https://github.com/rlatpks77/To-do-list',
       address: '',

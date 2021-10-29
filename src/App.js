@@ -9,7 +9,7 @@ import ScrollToTop from './hooks/useScrollToTop';
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <Route path="/" exact={true} component={LandingPage} />
         <Route path="/About" component={about} />
