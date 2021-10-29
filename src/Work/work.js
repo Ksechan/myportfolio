@@ -13,7 +13,9 @@ function Work() {
       id: '1',
       title: 'To Do List',
       subtitle: 'todo check app',
-      desc: '할일을 입력, 수정, 삭제할 수 있는 to-do-list',
+      desc: '할일을 입력, 수정, 삭제할 수 있는 to-do-list  ',
+      desc2: 'API를 통해 현재 위치를 가져와 날씨 표시 및 현재 시간 표시',
+      desc3: 'javascript와 css를 이용한 작업',
       thumbnail: '/thumbnail-images/todolist-thumbnail.gif',
       gitHub: 'https://github.com/rlatpks77/To-do-list',
       address: '',
@@ -22,7 +24,9 @@ function Work() {
       id: '2',
       title: 'Prototype shop',
       subtitle: 'prototype design shop',
-      desc: 'This prototype was made with ProtoPie, the interactive prototyping tool for all digital products.',
+      desc: 'prototype 디자인을 보고 구매할 수 있는 shop',
+      desc2: '장바구니 추가, 수정 삭제 기능 구현',
+      desc3: 'react와 css를 이용한 작업',
       thumbnail: '/thumbnail-images/prototypeshop-thumbnail.gif',
       gitHub: 'https://github.com/rlatpks77/prototype-shop',
       address: '',
@@ -46,7 +50,8 @@ function Work() {
       </div>
 
       {workArray.map((work) => {
-        const { id, title, desc, thumbnail, gitHub, address } = work;
+        const { id, title, desc, desc2, desc3, thumbnail, gitHub, address } =
+          work;
 
         return (
           <div className="work-container text-color-white" key={id}>
@@ -64,7 +69,17 @@ function Work() {
                 </a>
               </div>
               <div data-aos="fade-up" className="work-desc">
-                {desc}
+                <span>
+                  <span className="text-color-red">&#35;</span> {desc}
+                </span>
+                <br />
+                <span>
+                  <span className="text-color-red">&#35;</span> {desc2}
+                </span>
+                <br />
+                <span>
+                  <span className="text-color-red">&#35;</span> {desc3}
+                </span>
               </div>
             </div>
           </div>

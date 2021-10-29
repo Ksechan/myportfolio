@@ -550,8 +550,17 @@ body {
 }
 
 .work-desc {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   grid-column: 1 / 3;
+}
+
+.work-desc span {
+  display: inline-block;
+  margin-bottom: 2vh;
+}
+
+.work-desc span:last-child {
+  margin-bottom: 0;
 }
 
 .work-info img {
