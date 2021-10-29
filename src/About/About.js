@@ -22,7 +22,7 @@ const About = () => {
 
       <div className="about-margin">
         <p>
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-duration="1000">
             <h1 className="about-title">
               안녕하세요. <br />
               개발하며 개발되는 개발자 <br />
@@ -30,9 +30,7 @@ const About = () => {
             </h1>
           </div>
         </p>
-        <div className="about-bg-img"></div>
-
-        {/* 스크롤에 맞춰서 효과를 넣을 예정 */}
+        <div data-aos="fade-left" className="about-bg-img"></div>
 
         <h2 data-aos="fade-up">About</h2>
         <span className="text-color-red about-develop" data-aos="fade-up">
@@ -87,16 +85,11 @@ const About = () => {
           </ul>
         </div>
 
-        <div
-          className="about-link-container text-color-white"
-          data-aos="fade-down"
-        >
+        <div className="link-container text-color-white" data-aos="fade-down">
           <Link
             to="/Work"
             ref={hoverRef}
-            className={`about-link-to-work ${
-              isHovered ? 'text-color-red' : ''
-            }`}
+            className={`link-to-work ${isHovered ? 'text-color-red' : ''}`}
           >
             <span>GO Work</span>
           </Link>
@@ -104,9 +97,7 @@ const About = () => {
           <Link
             to="/Contact"
             ref={hoverRef2}
-            className={`about-link-to-contact ${
-              isHovered2 ? 'text-color-red' : ''
-            }`}
+            className={`link-to-contact ${isHovered2 ? 'text-color-red' : ''}`}
           >
             <span>GO Contact</span>
           </Link>

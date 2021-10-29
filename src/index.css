@@ -310,7 +310,6 @@ body {
 }
 
 .about-bg-img {
-  background-image: url('./assets/Rapunzel.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -453,42 +452,91 @@ body {
   background-image: url('../src/assets/react.png');
 }
 
-.about-link-container {
+/* 페이지 이동 링크 */
+
+.link-container {
   position: relative;
   display: flex;
   margin-top: 15vh;
   font-size: 0.8rem;
 }
 
-.about-link-container a {
+.link-container a {
   position: absolute;
   font-size: 1.5em;
   transition: all 0.3s ease;
 }
 
-.about-link-container a:last-child {
+.link-container a:last-child {
   left: 65vh;
 }
 
-.about-link-container a:hover {
+.link-container a:hover {
   transform: translateX(3vh);
 }
 
-.about-link-container a:hover::before {
+.link-container a:hover::before {
   content: '→   ';
+}
+
+.to-contact {
+  left: -65vh;
+  bottom: -7vh;
 }
 
 /* Work */
 
 .work-margin {
-  margin: 25vh 16vw 30vh 10vw;
+  margin: 50vh 16vw 30vh 10vw;
 }
 
-.idid {
+.work {
+  padding-left: 4vw;
+  border-left: solid #888 3px;
+}
+
+.work h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.work span {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.work-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3 1fr);
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  margin-top: 40vh;
+}
+
+.work-link {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  grid-column: 2 / 3;
+  grid-row: 2/ 3;
+  font-size: 0.8em;
+  margin: 0 auto 0;
+  padding: 0 2vh 0;
+}
+
+.work-link a {
+  transition: all 0.5s ease;
+}
+
+.work-link a:hover {
+  color: #ea0f1e;
+}
+
+.work-link a:first-child {
+  margin: 0 5vh 0 0;
 }
 
 .work-title {
@@ -496,30 +544,24 @@ body {
   font-weight: bold;
   letter-spacing: 0.05rem;
   height: 10vh;
-  grid-column: 1 / 3;
+  grid-column: 2 / 3;
+  text-align: center;
+  margin-top: 5vh;
 }
 
 .work-desc {
   font-size: 0.7rem;
-  margin-bottom: 50vh;
-}
-
-.work-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3 1fr);
-  background-color: silver;
-  font-size: 1em;
-  width: 100%;
-  height: 100%;
+  grid-column: 1 / 3;
 }
 
 .work-info img {
   display: block;
-  max-width: 45vw;
-  height: auto;
+  width: auto;
+  max-width: 60vw;
+  max-height: 80vw;
   margin-bottom: 8vh;
   border-radius: 0.5em;
+  grid-row: 1/3;
 }
 
 /* .item:nth-child(1) {
