@@ -18,7 +18,7 @@ function Contact() {
         </div>
 
         <ul className="contact-list">
-          <div className="margin-bottom">
+          <div>
             <div className="contact-grow-container2">
               <li className="contact-grow2">
                 <span>
