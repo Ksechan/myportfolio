@@ -21,7 +21,7 @@ const About = () => {
       <HomeBadge />
 
       <div className="about-margin">
-        <p>
+        <div>
           <div data-aos="fade-up" data-aos-duration="1000">
             <h1 className="about-title">
               안녕하세요. <br />
@@ -29,14 +29,14 @@ const About = () => {
               김세찬입니다.
             </h1>
           </div>
-        </p>
+        </div>
         <div data-aos="fade-left" className="about-bg-img"></div>
 
         <h2 data-aos="fade-up">About</h2>
         <span className="text-color-red about-develop" data-aos="fade-up">
           Develop [ dɪˈveləp ]
         </span>
-        <p className="about-desc">
+        <div className="about-desc">
           <p data-aos="fade-up">
             1. (소프트웨어 등) 개발하다. <br />
             2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
@@ -61,7 +61,7 @@ const About = () => {
             끌어올린 뒤 백엔드 부분도 접점을 만들어 풀스택 개발자로 진화하기
             위해 더욱 노력할 것입니다.
           </p>
-        </p>
+        </div>
 
         <div className="about-skill" data-aos="fade-right">
           <h2>Skills</h2>
