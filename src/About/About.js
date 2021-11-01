@@ -23,7 +23,7 @@ const About = () => {
       <div className="about-margin">
         <div>
           <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 className="about-title">
+            <h1 className="about-title title-border">
               안녕하세요. <br />
               개발하며 개발되는 개발자 <br />
               김세찬입니다.
@@ -32,10 +32,12 @@ const About = () => {
         </div>
         <div data-aos="fade-left" className="about-bg-img"></div>
 
-        <h2 data-aos="fade-up">About</h2>
-        <span className="text-color-red about-develop" data-aos="fade-up">
-          Develop [ dɪˈveləp ]
-        </span>
+        <div data-aos="fade-up" className="title-border">
+          <h2>About</h2>
+          <span className="text-color-red about-develop">
+            Develop [ dɪˈveləp ]
+          </span>
+        </div>
         <div className="about-desc">
           <p data-aos="fade-up">
             1. (소프트웨어 등) 개발하다. <br />
@@ -64,7 +66,12 @@ const About = () => {
         </div>
 
         <div className="about-skill" data-aos="fade-right">
-          <h2>Skills</h2>
+          <div className="title-border">
+            <h2>Skills</h2>
+            <span className="text-color-red skill-subtitle">
+              What i have learned
+            </span>
+          </div>
           <ul className="skill-img-container">
             <li className="html-img">
               <div className="graph-80" data-aos="skill-graph-80"></div>

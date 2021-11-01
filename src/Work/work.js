@@ -42,7 +42,11 @@ function Work() {
   return (
     <div className="text-color-white work-margin">
       <HomeBadge />
-      <div data-aos="fade-up" data-aos-duration="1000" className="work">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="work title-border"
+      >
         <h4>Work</h4>
         <span className="text-color-red">
           다양한 프로젝트를 경험하고 기록하는 중입니다.
