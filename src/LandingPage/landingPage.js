@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
 function LandingPage() {
+  const landingPageQuery = useMediaQuery({
+    query: '(min-width:769px)',
+  });
+
   const [aboutMouseOver, setAboutMouseOver] = useState(false);
   const [workMouseOver, setWorkMouseOver] = useState(false);
   const [contactMouseOver, setContactMouseOver] = useState(false);
 
+  const [mobileClick, setMobileClick] = useState(false);
+
+  const click = () => {
+    if (landingPageQuery === false) {
+      setMobileClick(!mobileClick);
+      console.log(mobileClick);
+    }
+  };
+
   return (
-    <div>
+    <div onClick={click}>
       <div className="bg-img"></div>
 
       <div className="landing-page-container">
         <div className="grow-container on-hover40">
           <div
-            className="first-grow"
+            className={`${mobileClick ? 'first-grow2' : 'first-grow'}`}
             onMouseEnter={() => {
               setAboutMouseOver(true);
             }}
@@ -22,23 +36,31 @@ function LandingPage() {
             }}
           >
             <Link to="/About">
-              <span
-                className={`text-color-white ${aboutMouseOver ? '' : 'hide'}`}
+              <div
+                className={`text-color-white ${
+                  landingPageQuery
+                    ? `${aboutMouseOver ? '' : 'hide'}`
+                    : `${mobileClick ? '' : 'hide'}`
+                }`}
               >
                 About
-              </span>
-              <span
-                className={`text-color-white ${aboutMouseOver ? 'hide' : ''}`}
+              </div>
+              <div
+                className={`text-color-white ${
+                  landingPageQuery
+                    ? `${aboutMouseOver ? 'hide' : ''}`
+                    : `${mobileClick ? 'hide' : ''}`
+                }`}
               >
                 Hello.
-              </span>
+              </div>
             </Link>
           </div>
         </div>
 
         <div className="grow-container on-hover40">
           <div
-            className="second-grow"
+            className={`${mobileClick ? 'second-grow2' : 'second-grow'}`}
             onMouseEnter={() => {
               setWorkMouseOver(true);
             }}
@@ -47,10 +69,22 @@ function LandingPage() {
             }}
           >
             <Link to="/Work">
-              <div className={`text-color-red ${workMouseOver ? '' : 'hide'}`}>
+              <div
+                className={`text-color-red ${
+                  landingPageQuery
+                    ? `${workMouseOver ? '' : 'hide'}`
+                    : `${mobileClick ? '' : 'hide'}`
+                }`}
+              >
                 Work
               </div>
-              <div className={`text-color-red ${workMouseOver ? 'hide' : ''}`}>
+              <div
+                className={`text-color-red ${
+                  landingPageQuery
+                    ? `${workMouseOver ? 'hide' : ''}`
+                    : `${mobileClick ? 'hide' : ''}`
+                }`}
+              >
                 I am
               </div>
             </Link>
@@ -59,7 +93,7 @@ function LandingPage() {
 
         <div className="grow-container on-hover40">
           <div
-            className="third-grow"
+            className={`${mobileClick ? 'third-grow2' : 'third-grow'}`}
             onMouseEnter={() => {
               setContactMouseOver(true);
             }}
@@ -69,18 +103,33 @@ function LandingPage() {
           >
             <Link to="/Contact">
               <div
-                className={`text-color-red ${contactMouseOver ? '' : 'hide'}`}
+                className={`text-color-red ${
+                  landingPageQuery
+                    ? `${contactMouseOver ? '' : 'hide'}`
+                    : `${mobileClick ? '' : 'hide'}`
+                }`}
               >
                 Contact
               </div>
               <div
-                className={`text-color-red ${contactMouseOver ? 'hide' : ''}`}
+                className={`text-color-red ${
+                  landingPageQuery
+                    ? `${contactMouseOver ? 'hide' : ''}`
+                    : `${mobileClick ? 'hide' : ''}`
+                }`}
               >
                 Sechan
               </div>
             </Link>
           </div>
         </div>
+      </div>
+      <div
+        className={`tap-anywhere text-color-white ${
+          landingPageQuery ? 'hide' : ''
+        }`}
+      >
+        Tap anywhere
       </div>
     </div>
   );

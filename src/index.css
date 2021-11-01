@@ -193,24 +193,44 @@ body {
 .grow-container {
   height: 18vmin;
   overflow-y: hidden;
+  font-size: 18vmin;
 }
 
 .first-grow {
-  font-size: 18vmin;
   animation: grow 0.7s backwards;
 }
 
 .second-grow {
-  font-size: 18vmin;
   animation: grow 0.7s 0.5s backwards;
 }
 
 .third-grow {
-  font-size: 18vmin;
   animation: grow 0.7s 1s backwards;
 }
 
 @keyframes grow {
+  to {
+    transform: translateY(0);
+  }
+
+  from {
+    transform: translateY(6em);
+  }
+}
+
+.first-grow2 {
+  animation: grow2 0.5s backwards;
+}
+
+.second-grow2 {
+  animation: grow2 0.5s 0.4s backwards;
+}
+
+.third-grow2 {
+  animation: grow2 0.5s 0.8s backwards;
+}
+
+@keyframes grow2 {
   to {
     transform: translateY(0);
   }
@@ -233,7 +253,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.35;
-  animation: bg-img-animate 1.7s backwards;
   overflow: hidden;
 }
 
@@ -253,10 +272,6 @@ body {
   display: block;
   margin-left: 0;
   transition: all 0.35s ease-out;
-}
-
-.on-hover40:hover {
-  margin-left: 40px;
 }
 
 /* HomeBadge */
@@ -657,5 +672,154 @@ body {
 
   from {
     transform: translateY(3rem);
+  }
+}
+
+/* Mobile */
+
+.tap-anywhere {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 5%;
+  font-size: 0.9rem;
+  animation: up-down 1s infinite;
+}
+
+@keyframes up-down {
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  0% {
+    transform: translateY(0);
+  }
+}
+
+/* media query */
+/* desktop */
+
+@media screen and (min-width: 769px) {
+  .bg-img {
+    animation: bg-img-animate 1.7s backwards;
+  }
+
+  .on-hover40:hover {
+    margin-left: 40px;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+  .bg-img {
+    left: 0;
+    width: 100%;
+  }
+
+  .grow-container {
+    height: 20vmin;
+    overflow-y: hidden;
+    font-size: 20vmin;
+  }
+
+  .first-grow {
+    animation: grow 0.5s backwards;
+  }
+
+  .second-grow {
+    animation: grow 0.5s 0.4s backwards;
+  }
+
+  .third-grow {
+    animation: grow 0.5s 0.8s backwards;
+  }
+
+  @keyframes grow {
+    to {
+      transform: translateY(0);
+    }
+
+    from {
+      transform: translateY(6em);
+    }
+  }
+
+  .about-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 0 20vh 30vh 0;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .skill-img-container li {
+    width: 7vh;
+    height: 10vh;
+  }
+
+  .skill-img-container li:first-child {
+    margin-top: 4vh;
+  }
+
+  .skill-img-container li div:first-child {
+    left: 13vh;
+  }
+
+  .skill-img-container li div:last-child {
+    left: 13vh;
+    width: 60vh;
+  }
+
+  .graph-80 {
+    width: 48vh;
+  }
+
+  [data-aos='skill-graph-80'] {
+    width: 0;
+    transition: width;
+  }
+  [data-aos='skill-graph-80'].aos-animate {
+    width: 48vh;
+  }
+
+  .graph-70 {
+    width: 42vh;
+  }
+
+  [data-aos='skill-graph-70'] {
+    width: 0;
+    transition: width;
+  }
+  [data-aos='skill-graph-70'].aos-animate {
+    width: 42vh;
+  }
+
+  .graph-60 {
+    width: 36vh;
+  }
+
+  [data-aos='skill-graph-60'] {
+    width: 0;
+    transition: width;
+  }
+  [data-aos='skill-graph-60'].aos-animate {
+    width: 36vh;
+  }
+
+  /* 페이지 이동 링크 */
+
+  .link-container a {
+    font-size: 1rem;
+  }
+
+  .link-container a:last-child {
+    left: 50vh;
   }
 }
