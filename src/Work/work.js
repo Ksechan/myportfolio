@@ -60,7 +60,12 @@ function Work() {
         return (
           <div className="work-container text-color-white" key={id}>
             <div className="work-info">
-              <img data-aos="fade-up-right" src={thumbnail} alt="thumbnail" />
+              <img
+                data-aos="fade-up-right"
+                src={thumbnail}
+                alt="thumbnail"
+                className="work-thumbnail"
+              />
               <div data-aos="fade-left" className="work-title">
                 {title}
               </div>
@@ -72,7 +77,7 @@ function Work() {
                   Web
                 </a>
               </div>
-              <div data-aos="fade-up" className="work-desc">
+              <div data-aos="fade-right" className="work-desc">
                 <span>
                   <span className="text-color-red">&#35;</span> {desc}
                 </span>
@@ -89,7 +94,10 @@ function Work() {
           </div>
         );
       })}
-      <div data-aos="fade-down-right" className="link-container to-contact">
+      <div
+        data-aos="fade-right"
+        className="link-container work-link-to-contact"
+      >
         <Link
           to="/Contact"
           ref={hoverRef}
