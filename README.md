@@ -17,7 +17,6 @@
 
 <img src = "https://user-images.githubusercontent.com/74916518/139802881-066446ce-ffe3-4c97-9873-5645692ad014.gif" width="60%" height="60%">
 
-  #### 모든 페이지에서 랜딩페이지로 올 수 있게끔 홈페이지 링크 버튼 작업
 
 ## About 페이지
 
@@ -36,3 +35,6 @@ map()메서드를 이용하여 프로젝트가 추가될 때마다 간편하게 
 ## Contact 페이지
 
 <img src = "https://user-images.githubusercontent.com/74916518/139809884-d8724ab0-5fc8-43f6-81d6-65a44588486e.gif" width="60%" height="60%">
+
+
+  #### 모든 페이지에서 랜딩페이지로 올 수 있게끔 홈페이지 링크 버튼 작업
