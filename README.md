@@ -15,4 +15,4 @@
 
  React responsive 라이브러리를 활용하여 태블릿~모바일 해상도에서는 화면 아무데나 클릭 시 글자가 변하게 작업
 
-![MobileHover](https://user-images.githubusercontent.com/74916518/139802881-066446ce-ffe3-4c97-9873-5645692ad014.gif){: width="70%" height="70%"}
+<img src = "https://user-images.githubusercontent.com/74916518/139802881-066446ce-ffe3-4c97-9873-5645692ad014.gif" width="30%" height="30%">
