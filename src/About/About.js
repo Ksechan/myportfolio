@@ -3,7 +3,7 @@ import useHover from '../hooks/useHook';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import '../aos-master/dist/aos.css';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useEffect } from 'react';
 
 const About = () => {
   const [hoverRef, isHovered] = useHover();

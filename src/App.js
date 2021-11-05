@@ -11,7 +11,7 @@ function App() {
     <div>
       <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
-        <Route path="/myportfolio/" exact={true} component={LandingPage} />
+        <Route path="/" exact={true} component={LandingPage} />
         <Route path="/About" component={about} />
         <Route path="/Work" component={Work} />
         <Route path="/Contact" component={Contact} />

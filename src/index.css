@@ -164,6 +164,7 @@ p {
 html,
 body {
   width: 100%;
+  font-family: 'Gothic A1', sans-serif;
   font-size: calc(1em + 1vw);
   margin: 0;
   overflow-x: hidden;
@@ -189,7 +190,7 @@ body {
   top: 50%;
   left: 10%;
   text-align: left;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.1;
   letter-spacing: 2px;
   transform: translateY(-50%);
@@ -329,7 +330,7 @@ body {
   font-size: 2.3rem;
   line-height: 1.3;
   letter-spacing: 0.1em;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 30vh;
 }
 
@@ -351,7 +352,7 @@ body {
 
 .about-container h2 {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .about-develop {
@@ -521,7 +522,7 @@ body {
 
 .work h4 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .work span {
@@ -576,7 +577,7 @@ body {
 
 .work-title {
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.05rem;
   height: 10vh;
   grid-column: 2 / 3;
@@ -614,7 +615,7 @@ body {
 .contact-title {
   display: block;
   font-size: 2.3rem;
-  font-weight: bold;
+  font-weight: 700;
   margin: 5vmin 0 5vmin 0;
   padding-top: 5vmin;
   letter-spacing: 0.1em;

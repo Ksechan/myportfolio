@@ -96,6 +96,7 @@ function Work() {
       })}
       <div
         data-aos="fade-right"
+        data-aos-anchor-placement="bottom-bottom"
         className="link-container work-link-to-contact"
       >
         <Link
