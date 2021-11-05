@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Router basename={process.env.PUBLIC_URL}>
-        <Route path="/" exact={true} component={LandingPage} />
+        <Route path="/myportfolio" exact={true} component={LandingPage} />
         <Route path="/About" component={about} />
         <Route path="/Work" component={Work} />
         <Route path="/Contact" component={Contact} />
