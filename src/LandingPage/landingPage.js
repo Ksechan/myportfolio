@@ -1,4 +1,3 @@
-import React, { useRef, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 

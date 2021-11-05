@@ -30,7 +30,8 @@ const About = () => {
             </h1>
           </div>
         </div>
-        <div data-aos="fade-left" className="about-bg-img"></div>
+
+        <div data-aos="fade-right" className="about-img"></div>
 
         <div data-aos="fade-up" className="title-border">
           <h2>About</h2>
