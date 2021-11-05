@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import about from './about/about';
 import Work from './work/work';
 import Contact from './contact/contact';
+import ScrollToTop from './homeBadge/scrollToTop';
 
 function App() {
   return (
     <div>
       <Router basename={process.env.PUBLIC_URL}>
-        <Route path="/myportfolio" exact={true} component={LandingPage} />
+        <ScrollToTop />
+        <Route path="/myportfolio/" exact={true} component={LandingPage} />
         <Route path="/About" component={about} />
         <Route path="/Work" component={Work} />
         <Route path="/Contact" component={Contact} />

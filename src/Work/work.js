@@ -62,7 +62,7 @@ function Work() {
             <div className="work-info">
               <img
                 data-aos="fade-up-right"
-                src={thumbnail}
+                src={process.env.PUBLIC_URL + thumbnail}
                 alt="thumbnail"
                 className="work-thumbnail"
               />
