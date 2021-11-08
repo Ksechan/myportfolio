@@ -18,7 +18,7 @@ function Work() {
       desc3: 'javascript와 css를 이용한 작업',
       thumbnail: '/thumbnail-images/todolist-thumbnail.gif',
       gitHub: 'https://github.com/rlatpks77/To-do-list',
-      address: '',
+      address: 'https://rlatpks77.github.io/To-do-list/',
     },
     {
       id: '2',
@@ -29,7 +29,18 @@ function Work() {
       desc3: 'react와 css를 이용한 작업',
       thumbnail: '/thumbnail-images/prototypeshop-thumbnail.gif',
       gitHub: 'https://github.com/rlatpks77/prototype-shop',
-      address: '',
+      address: 'https://rlatpks77.github.io/prototype-shop/',
+    },
+    {
+      id: '3',
+      title: 'Portfolio',
+      subtitle: 'sechan kim personal portfolio',
+      desc: '김세찬의 개인 포트폴리오 사이트',
+      desc2: 'media query를 이용한 반응형 웹 구현',
+      desc3: 'react와 css를 이용한 작업',
+      thumbnail: '/thumbnail-images/portfolio-thumbnail.gif',
+      gitHub: 'https://github.com/rlatpks77/myportfolio',
+      address: 'https://rlatpks77.github.io/myportfolio/',
     },
   ];
 
