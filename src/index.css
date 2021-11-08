@@ -788,6 +788,11 @@ body {
   .link-container a {
     font-size: 1rem;
   }
+
+  /* homebadge */
+  .homebadge-container:hover {
+    margin-right: 0;
+  }
 }
 
 /* 모바일 */

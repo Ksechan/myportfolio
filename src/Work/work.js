@@ -66,10 +66,10 @@ function Work() {
                 alt="thumbnail"
                 className="work-thumbnail"
               />
-              <div data-aos="fade-left" className="work-title">
+              <div data-aos="fade-up" className="work-title">
                 {title}
               </div>
-              <div data-aos="fade-left" className="work-link">
+              <div data-aos="fade-up" className="work-link">
                 <a href={gitHub} target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>

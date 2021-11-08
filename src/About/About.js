@@ -44,7 +44,7 @@ const About = () => {
             2. (기술·능력·자질 등이[을]) 개발되다[하다], 발전[진전]하다[시키다]
           </p>
           <br /> <br />
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
             위의 뜻을 제외하고도 Develop이라는 단어가 내포하고 있는 의미는
             굉장히 많습니다.
             <br />

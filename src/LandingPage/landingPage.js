@@ -16,7 +16,6 @@ function LandingPage() {
   const click = () => {
     if (landingPageQuery === false) {
       setMobileClick(!mobileClick);
-      console.log(mobileClick);
     }
   };
 
